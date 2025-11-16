@@ -1,10 +1,12 @@
 import { blogs } from "../data/blogs";
 import { notFound } from "next/navigation";
 import ShareButtons from "@/components/ShareButtons"; // client component
+import Image from "next/image";
 
 export async function generateMetadata({ params }) {
-  const blog = blogs.find((item) => item.slug.toLowerCase() === params.slug.toLowerCase());
-
+  const blog = blogs.find(
+    (item) => item.slug.toLowerCase() === params.slug.toLowerCase(),
+  );
 
   if (!blog) return {};
 
@@ -32,11 +34,16 @@ export default function BlogPage({ params }) {
       <p className="mb-6 text-sm text-gray-300">
         By {blog.author} | {blog.date}
       </p>
-      <img
+
+      <Image
         src={blog.image}
         alt={blog.title}
+        width={1200} // you can change
+        height={600} // you can change
         className="mb-6 w-full rounded-lg"
+        priority={true}
       />
+
       <div
         className="prose prose-invert prose-h2:text-3xl prose-h2:text-blue-400 prose-p:text-white prose-li:text-white max-w-none text-justify"
         dangerouslySetInnerHTML={{ __html: blog.content }}
