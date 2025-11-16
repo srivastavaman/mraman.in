@@ -36,7 +36,7 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-4 items-center justify-center lg:justify-start">
             <Link href="/experience">
               <button className="bg-blue-500 hover:bg-blue-600 w-full sm:w-auto px-10 py-4 rounded-2xl text-white font-semibold text-lg">
-                Experiences
+              Experience 
               </button>
             </Link>
             <Link href="#contact">
@@ -67,3 +67,6 @@ const Hero = () => {
 }
 
 export default Hero
+
+
+

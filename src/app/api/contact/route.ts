@@ -1,25 +1,29 @@
-import clientPromise from "@/lib/mongodb";
 import { NextResponse } from "next/server";
+import { getConnection } from "@/lib/db";
 
-export async function POST(req: Request) {
+export async function POST(req) {
   try {
-    const body = await req.json();
-    const { name, email, message } = body;
+    const { name, email, message } = await req.json();
 
-    const client = await clientPromise;
-    const db = client.db("portfolio"); // Replace with your actual DB name
-    const collection = db.collection("contacts");
+    if (!name || !email || !message) {
+      return NextResponse.json({ error: "All fields are required." }, { status: 400 });
+    }
 
-    await collection.insertOne({
-      name,
-      email,
-      message,
-      createdAt: new Date(),
-    });
+    const conn = await getConnection();
+    const query = `
+  INSERT INTO contacts (name, email, message, created_at)
+  VALUES (?, ?, ?, NOW())
+  ON DUPLICATE KEY UPDATE
+    name = VALUES(name),
+    message = VALUES(message),
+    created_at = NOW()
+`;
+    await conn.execute(query, [name, email, message]);
+    await conn.end();
 
-    return NextResponse.json({ message: "Message sent successfully" }, { status: 200 });
-  } catch (error) {
-    console.error("Contact API error:", error);
-    return NextResponse.json({ error: "Failed to send message" }, { status: 500 });
+    return NextResponse.json({ message: "Success" });
+  } catch (err) {
+    console.error("Insert error:", err);
+    return NextResponse.json({ error: "Server error" }, { status: 500 });
   }
 }

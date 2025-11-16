@@ -27,7 +27,7 @@ export default function BlogPage({ params }) {
   const url = `https://mraman.in/blog/${params.slug}`;
 
   return (
-    <div className="bg-gray-800 px-6 py-10 font-serif text-white sm:px-12 md:px-40">
+    <div className="bg-gray-900 px-6 py-10  text-white sm:px-12 md:px-40">
       <h1 className="mb-4 text-4xl font-bold text-blue-400">{blog.title}</h1>
       <p className="mb-6 text-sm text-gray-300">
         By {blog.author} | {blog.date}

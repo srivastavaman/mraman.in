@@ -8,69 +8,74 @@ import {
   FaInstagram,
   FaGithub,
   FaWhatsapp,
+  FaYoutube,
 } from "react-icons/fa";
+import { FiBookOpen } from "react-icons/fi";
 
 const NewsLatterBox = () => {
   const { theme } = useTheme();
 
   return (
-    <div className="relative z-10 rounded-2xl bg-slate-950 p-20 shadow-three dark: sm:p-11 lg:p-8 xl:p-11">
+    <div className="dark: relative z-10 rounded-2xl bg-slate-950 p-20 shadow-three sm:p-11 lg:p-8 xl:p-11">
       <h3 className="mb-6 text-2xl font-bold leading-tight text-white">
         Make Connection on Social Media
       </h3>
 
-      <div className="mb-6 flex items-center justify-center gap-4">
+      <div className="mb-6 flex flex-wrap items-center justify-center gap-4">
         <a
-          href="https://facebook.com"
+          // href="https://facebook.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-white hover:text-blue-500 transition"
+          className="text-white transition hover:text-blue-500"
         >
           <FaFacebookF size={24} />
         </a>
+
         <a
-          href="https://twitter.com"
+          href="https://www.linkedin.com/in/srivastavaman/"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-white hover:text-sky-400 transition"
-        >
-          <FaTwitter size={24} />
-        </a>
-        <a
-          href="https://linkedin.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-white hover:text-blue-600 transition"
+          className="text-white transition hover:text-blue-600"
         >
           <FaLinkedinIn size={24} />
         </a>
         <a
-          href="https://instagram.com"
+          // href="https://instagram.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-white hover:text-pink-500 transition"
+          className="text-white transition hover:text-pink-500"
         >
           <FaInstagram size={24} />
         </a>
+
         <a
-          href="https://github.com"
+          // href="https://bit.ly/mywhatsappchat" // 🔁 Use your shortened URL
           target="_blank"
           rel="noopener noreferrer"
-          className="text-white hover:text-gray-400 transition"
-        >
-          <FaGithub size={24} />
-        </a>
-        <a
-          href="https://wa.me/919999999999" // 🔁 Replace with your actual WhatsApp number
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-white hover:text-green-400 transition"
+          className="text-white transition hover:text-green-400"
         >
           <FaWhatsapp size={24} />
         </a>
+
+        <a
+          href="https://youtube.com/@kuch_alag_sekho"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-white transition hover:text-red-500"
+        >
+          <FaYoutube size={24} />
+        </a>
+        <a
+          href="https://blog.mraman.in"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:text-yellow-400 text-white transition"
+        >
+          <FiBookOpen size={24} />
+        </a>
       </div>
 
-      <p className="text-center text-base leading-relaxed text-gray-400 pt-3">
+      <p className="pt-3 text-center text-base leading-relaxed text-gray-400">
         Follow us to stay updated with our latest work and content!
       </p>
 
