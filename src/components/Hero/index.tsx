@@ -17,7 +17,7 @@ const Hero = () => {
           transition={{ duration: 1, ease: 'easeOut' }}
         >
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-            Hi, I'm <br />
+            Hi, I&apos;m <br />
             <span className="text-blue-400">Aman Srivastav</span><br />
             <span className="text-yellow-400 whitespace-nowrap text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
               <Typewriter
