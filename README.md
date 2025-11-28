@@ -29,7 +29,7 @@ Welcome to the official portfolio of *Mr. Aman*, a tech enthusiast, developer, a
 ## ✨ Features
 
 - 🔥 Dynamic blog routing using [slug]
-- 👁 Visitor counter using MongoDB
+- 👁 Visitor counter using MYSQL
 - 📱 Fully responsive design
 - 🧠 SEO-ready metadata per blog
 - 🧩 Modular components for scalability

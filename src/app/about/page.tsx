@@ -6,7 +6,7 @@ import {
   FaJava,
   FaNetworkWired,
 } from "react-icons/fa";
-import { SiMongodb, SiBootstrap, SiArduino, SiEspressif } from "react-icons/si";
+import { SiBootstrap, SiArduino, SiEspressif } from "react-icons/si";
 import { SiWordpress } from "react-icons/si";
 import { FaSearch } from "react-icons/fa";
 
@@ -338,9 +338,7 @@ const Knowmore = () => {
           <div>
             <FaReact className="mr-2 inline text-cyan-400" /> React / Next.js
           </div>
-          <div>
-            <SiMongodb className="mr-2 inline text-green-500" /> MongoDB
-          </div>
+         
           <div>
             <SiBootstrap className="mr-2 inline text-purple-500" /> Bootstrap
           </div>

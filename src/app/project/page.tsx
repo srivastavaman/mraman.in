@@ -18,7 +18,7 @@ const projects = [
   {
     title: 'Book Heaven – Buy & Sell Books',
     description:
-      'A simple marketplace web app built using React and MongoDB for buying/selling second-hand books.',
+      'A simple marketplace web app built using React and MYSQL for buying/selling second-hand books.',
     image: '/projects/bookheaven.jpg',
   },
 ]
