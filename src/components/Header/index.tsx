@@ -100,7 +100,7 @@ export default function Header() {
       {/* Popup Dialog */}
       {showPopup && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-[1000]">
-          <div className="bg-white rounded-lg shadow-lg p-6 max-w-sm w-full text-center">
+          <div className="bg-slate-800 rounded-lg shadow-lg p-6 max-w-sm w-full text-center">
             <h2 className="text-lg font-semibold mb-4">Leaving Our Website</h2>
             <p className="mb-6">You are about to visit an external website. Continue?</p>
             <div className="flex justify-center gap-4">
